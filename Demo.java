@@ -6,7 +6,6 @@ public class Demo {
         Connection con = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/college", "root", "#eman@123fatima"
         );
-
         Statement stmt = con.createStatement();
 
         ResultSet rs = stmt.executeQuery("SELECT * FROM students");
@@ -17,7 +16,6 @@ public class Demo {
 
             System.out.println(id + " " + name);
         }
-
         rs.close();
         stmt.close();
         con.close();
